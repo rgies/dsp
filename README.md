@@ -1,4 +1,4 @@
 dps
 ===
 
-Digital Story Processing Solution
+Digital Story Processing
