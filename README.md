@@ -1,4 +1,4 @@
-dps
+DPS
 ===
 
-Digital Story Processing
+[D]igital [S]tory [P]rocessing
