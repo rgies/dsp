@@ -1,5 +1,9 @@
-[D]igital [S]tory [P]rocessing
+Digital Story Processing
 ===============================
+
+Framework to help agile project to work with digital story cards.
+
+
 Install
 ========
 
