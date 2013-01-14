@@ -1,11 +1,26 @@
 {
+    "name": "rgies/dsp",
+    "description": "Digital Story Processing",
+    "version": "master",
+    "authors": [
+        {
+            "name": "Robert Gies",
+            "email": "mail@gies-it.de"
+        },
+        {
+            "name": "Community contributions",
+            "homepage": "https://github.com/rgies/dsp/contributors"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
     "require": {
         "php":              ">=5.3.2",
         "symfony/symfony":  ">=2.0.10,<2.1.0-dev",
         "doctrine/orm":     ">=2.1.0,<2.2.0-dev",
         "doctrine/doctrine-migrations-bundle": "2.0.*",
         "twig/extensions":  "*",
-
         "symfony/assetic-bundle":          "2.0.*",
         "sensio/generator-bundle":         "2.0.*",
         "sensio/framework-extra-bundle":   "2.0.*",
@@ -15,8 +30,6 @@
         "sensio/buzz-bundle":              "dev-master",
         "zf2":                             "master"
     },
-
-
     "repositories": [
         {
             "type": "package",
@@ -42,8 +55,28 @@
             "Jimdo": "src/"
         }
     },
-
+    "scripts": {
+        "post-install-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "post-update-cmd": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ]
+    },
+    "config": {
+        "bin-dir": "dev"
+    },
     "minimum-stability": "dev",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web"
+    },
     "require-dev": {
       "phpunit-testing/phpunit": "dev-master"
   }
