@@ -1,0 +1,3 @@
+JimdoJimFlowPrintTicketBundle:
+    resource: "@JimdoJimFlowPrintTicketBundle/Resources/config/routing.yml"
+    prefix:   /
